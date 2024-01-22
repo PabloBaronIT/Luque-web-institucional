@@ -1,12 +1,16 @@
 <template>
   <NavTopComponent />
   <router-view />
+  <FooterComponent />
 </template>
 <script>
 import NavTopComponent from "./components/Nav/NavTopComponent.vue";
+import FooterComponent from "./components/Footer/FooterComponent.vue";
+
 export default {
   components: {
     NavTopComponent,
+    FooterComponent,
   },
 };
 </script>
@@ -17,7 +21,7 @@ export default {
   padding: 0;
 }
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* text-align: center; */
