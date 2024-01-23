@@ -45,8 +45,8 @@
       </div>
       <div class="tiempo">
         <div class="sol"></div>
-        <p style="font-weight: 600">26°</p>
-        <p style="margin-top: -1.5rem">soleado</p>
+        <h6 style="font-weight: 600">26°</h6>
+        <p style="margin-top: -0.5rem">soleado</p>
       </div>
     </div>
   </nav>
@@ -207,6 +207,7 @@ export default {
   );
   box-shadow: 1px -4px 4px 1px rgba(0, 0, 0, 0.15) inset;
   position: relative;
+  z-index: 5;
   /* position: -webkit-sticky; */
   /* bottom: -3.3rem; */
 }
@@ -214,7 +215,7 @@ export default {
   position: fixed;
   z-index: 500;
   top: 0;
-  /* width: 85%; */
+  width: 100%;
   /* max-width: 100%; */
   height: 55px;
   margin: auto;
@@ -222,12 +223,15 @@ export default {
   flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
-  margin-left: 6.5rem;
-  border-radius: 0px 0px 16px 16px;
-  background: var(
-    --Degrad-completo,
-    linear-gradient(90deg, #00c3a8 0.01%, #ffb900 54.81%, #ff2745 104.96%)
+  /* margin-left: 6.5rem; */
+  border-radius: 0px 0px 0px 0px;
+  background: linear-gradient(
+    90deg,
+    #00c3a8 0.01%,
+    #ffb900 54.81%,
+    #ff2745 104.96%
   );
+
   box-shadow: 1px -4px 4px 1px rgba(0, 0, 0, 0.15) inset;
 }
 .btn {
@@ -249,7 +253,7 @@ export default {
   /* margin-left: -2rem; */
 }
 .tiempo {
-  width: 10%;
+  width: 12%;
   background: white;
   height: 80px;
   display: block;
@@ -258,6 +262,9 @@ export default {
   text-align: center;
   border-radius: 8px;
   padding: 0.5rem 0;
+}
+.tiempo p {
+  font-size: 14px;
 }
 .sol {
   width: 29px;
@@ -284,7 +291,7 @@ export default {
 }
 input {
   width: 60%;
-  height: 55%;
+  height: 45%;
   border-radius: 16px;
   border: none;
   background: #fff;

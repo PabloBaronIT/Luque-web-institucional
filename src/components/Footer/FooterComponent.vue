@@ -1,10 +1,49 @@
 <template>
   <footer>
     <div class="telefonos-container">
-      <h5 style="font-weight: 700; font-size: 24px">
-        TELÉFONOS ÚTILES - ATENCIÓN 24 HS
-      </h5>
       <div class="telefonos">
+        <div class="telefono">
+          <div style="display: flex; align-items: center">
+            <i class="bi bi-telephone-fill asd"></i>
+            <h1>111</h1>
+          </div>
+          <h6>HOSPITAL</h6>
+        </div>
+        <div class="linea"></div>
+        <div class="telefono">
+          <div style="display: flex; align-items: center">
+            <i class="bi bi-telephone-fill asd"></i>
+            <h1>147</h1>
+          </div>
+          <h6>
+            ATENCIÓN AL <br />
+            VECINO
+          </h6>
+        </div>
+        <div class="linea"></div>
+        <div class="telefono">
+          <div style="display: flex; align-items: center">
+            <i class="bi bi-telephone-fill asd"></i>
+            <h1>102</h1>
+          </div>
+          <h6>POLICÍA</h6>
+        </div>
+        <div class="linea"></div>
+        <div class="telefono">
+          <div style="display: flex; align-items: center">
+            <i class="bi bi-telephone-fill asd"></i>
+            <h1>100</h1>
+          </div>
+          <h6>BOMBEROS</h6>
+        </div>
+      </div>
+      <div>
+        <img src="./../../assets/images/LogoBlancoLuque.svg.svg" alt="logo" />
+      </div>
+      <!-- <h5 style="font-weight: 700; font-size: 24px">
+        TELÉFONOS ÚTILES - ATENCIÓN 24 HS
+      </h5> -->
+      <!-- <div class="telefonos">
         <div style="text-align: center">
           <h4>HOSPITAL</h4>
           <h1 class="numeros">111</h1>
@@ -17,11 +56,11 @@
           <h4>POLICíA</h4>
           <h1 class="numeros">102</h1>
         </div>
-      </div>
+      </div> -->
     </div>
     <h5 class="direccion">
-      <strong>Municipalida de Sacanta | </strong>
-      25 de Mayo 292, Sacanta, Cordoba | CP X5945 | TEL.: 03533 15 417923
+      Municipalidad de Luque | 9 de julio 806, Luque, Córdoba | CP X5967 | TEL.:
+      03573 48-0113
     </h5>
   </footer>
 </template>
@@ -34,56 +73,74 @@ export default {
 
 <style scoped>
 footer {
-  margin: 0;
+  /* margin: 0; */
   background: linear-gradient(
     90deg,
-    #019939 -3.32%,
-    #ffcc03 49.27%,
-    #e52320 110.14%
+    #00c3a8 0.01%,
+    #ffb900 54.81%,
+    #ff2745 104.96%
   );
   /* background: var(--blue); */
   display: flex;
   flex-flow: column wrap;
-  height: 43vh;
+  height: 40vh;
   /* box-shadow: 0px 0px 15px #aaa; */
   align-items: center;
   justify-content: space-evenly;
   /* padding: 20px; */
-  color: #019939;
   width: 100%;
+  margin-top: 3%;
 }
-h4 {
-  font-weight: 400;
+h1 {
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 800;
   line-height: normal;
 }
+.asd {
+  font-size: 38px;
+}
+.linea {
+  height: auto;
+  width: 2px;
+  background: white;
+}
+/* h4 {
+  font-weight: 400;
+  line-height: normal;
+} */
 .telefonos-container {
   width: 88%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
-  background: rgba(245, 245, 245, 0.15);
-  backdrop-filter: blur(7.5px);
-  border-radius: 50px 0px;
-  padding-top: 1rem;
+  justify-content: space-between;
+  /* background: rgba(245, 245, 245, 0.15); */
+  /* backdrop-filter: blur(7.5px); */
+  /* border-radius: 50px 0px; */
+  /* padding-top: 1rem; */
 }
 .telefonos {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 90%;
+  width: 60%;
   color: white;
-  margin-top: 1vh;
-  margin-bottom: -1rem;
+  height: auto;
+  /* margin-top: 1vh; */
+  /* margin-bottom: -1rem; */
 }
-.numeros {
+.telefono {
+  text-align: center;
+}
+/* .numeros {
   color: #019939;
   font-size: 80px;
   font-weight: 900;
   line-height: normal;
   font-style: normal;
   margin-top: -5vh;
-}
+} */
 .direccion {
   color: white;
   font-weight: 300;

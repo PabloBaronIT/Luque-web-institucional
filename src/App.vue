@@ -24,6 +24,7 @@ export default {
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #ffffff;
   /* text-align: center; */
   /* color: #2c3e50; */
 }

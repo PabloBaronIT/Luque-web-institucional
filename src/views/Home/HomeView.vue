@@ -49,10 +49,11 @@ export default {
 <style scoped>
 video {
   width: 100%;
-  margin-top: -2.3rem;
+  margin-top: -3.5rem;
 }
 .contenedor-home {
   /* padding-top: 100px; */
+  background: #f5f5f5;
 }
 .linea {
   display: flex;

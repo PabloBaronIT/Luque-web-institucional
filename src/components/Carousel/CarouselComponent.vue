@@ -72,7 +72,7 @@ export default {
   width: 80%;
   height: 100%;
   margin: auto;
-  /* margin-bottom: 3rem; */
+  /* margin-bottom: 10%; */
   /* padding: 0 0; */
   padding: 0 2rem;
   /* background: red; */
