@@ -53,7 +53,8 @@
   <div class="botones" :class="{ fixed: isSticky }">
     <div class="dropdown">
       <button
-        class="btn btn dropdown-toggle"
+        class="btn btn dropdown-toggle asd"
+        :class="{ asd: isSticky }"
         type="button"
         data-bs-toggle="dropdown"
         aria-expanded="false"
@@ -151,22 +152,47 @@
   </div> -->
 </template>
 <script>
+// import axios from "axios";
+
 export default {
   name: "topNavComponent",
   data() {
     return {
       valor: "",
       isSticky: false,
+      tiempo: "",
     };
   },
   mounted() {
     window.addEventListener("scroll", this.handleScroll);
+    // this.getTiempo();
   },
   methods: {
     handleScroll() {
       // Verifica la posición de desplazamiento para determinar si se activa el sticky
       this.isSticky = window.scrollY > 100; // Puedes ajustar el valor según tus necesidades
     },
+    // getTiempo() {
+    //   axios
+    //     .get(
+    //       "https://api.tutiempo.net/json/?lan=es&apid=a5GX44aXXaahzCV&ll=-31.6476686,-63.3444"
+    //     )
+    //     .then((response) => {
+    //       console.log(response);
+    //       this.tiempo = response.data.hour_hour.hour1.temperature;
+    //       let asd = response.data.day1.text;
+    //       let icon = response.data.day1.icon;
+    //       // let dia = new Date();
+    //       // this.dia = dia.getDate();
+    //       // this.getDia(dia.getDay());
+    //       // this.getMes(dia.getMonth());
+    //       // this.text = asd.split(" ");
+    //       // this.text = this.text[0].toUpperCase();
+    //       this.text = asd.toUpperCase();
+
+    //       this.icono = `https://v5i.tutiempo.net/wi/02/30/${icon}.png`;
+    //     });
+    // },
   },
 };
 </script>
@@ -177,6 +203,11 @@ export default {
 }
 </style>
 <style scoped>
+.asd {
+  opacity: 1;
+  z-index: 200;
+  color: white;
+}
 .top-nav-container {
   height: 106px;
   display: flex;
@@ -213,7 +244,7 @@ export default {
 }
 .fixed {
   position: fixed;
-  z-index: 500;
+  z-index: 100;
   top: 0;
   width: 100%;
   /* max-width: 100%; */
@@ -231,7 +262,8 @@ export default {
     #ffb900 54.81%,
     #ff2745 104.96%
   );
-
+  opacity: 0.6;
+  color: #fff;
   box-shadow: 1px -4px 4px 1px rgba(0, 0, 0, 0.15) inset;
 }
 .btn {

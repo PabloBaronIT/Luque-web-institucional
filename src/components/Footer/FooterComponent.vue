@@ -89,7 +89,6 @@ footer {
   justify-content: space-evenly;
   /* padding: 20px; */
   width: 100%;
-  margin-top: 3%;
 }
 h1 {
   font-size: 64px;

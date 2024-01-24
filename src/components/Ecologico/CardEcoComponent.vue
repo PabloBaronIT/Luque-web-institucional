@@ -8,8 +8,9 @@
         <h3>¡POR UN PLANETA MÁS VERDE!</h3>
         <p>
           La digitalización es la clave para proteger nuestro planeta. Al
-          reducir el uso de papel y adoptar tecnologías ecoamigables podemos
-          hacer del mundo un lugar más verde y limpio.
+          reducir el uso de papel y <br />
+          adoptar tecnologías ecoamigables podemos hacer del mundo un lugar más
+          verde y limpio.
         </p>
       </div>
     </div>
@@ -26,34 +27,35 @@ export default {
   color: white;
   /* height: 5%; */
   max-height: 169px;
-  width: 75%;
+  width: 100%;
   margin: auto;
-  border-radius: 0px 50px;
-  margin-top: 3%;
+  margin-top: 4%;
   padding: 1rem;
 }
 .medio {
-  width: 95%;
+  width: 78%;
   height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin: auto;
+  /* background: red; */
 }
 .logo {
   min-height: 130px;
   min-width: 130px;
-  margin-left: 16%;
+  /* margin-left: 16%; */
 }
 .text {
   text-align: left;
-  width: 78%;
+  width: 85%;
+  margin-top: 2%;
 }
 .text p {
-  font-size: 21px;
-  margin-top: -0.7rem;
-  font-weight: 100;
+  font-size: 19px;
+  /* margin-top: -0.7rem; */
+  font-weight: 400;
 }
 .text h3 {
   font-weight: 700;

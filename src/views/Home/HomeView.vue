@@ -9,6 +9,7 @@
     ></video>
     <TarjetasComponent />
     <ImagenComponent />
+    <PromocionesComponent />
     <CardEcoComponent />
     <div class="linea">
       <div class="izquierdo"></div>
@@ -28,8 +29,10 @@
 </template>
 
 <script>
+// import axios from "axios";
 import TarjetasComponent from "@/components/Buscador/TarjetasComponent.vue";
 import ImagenComponent from "@/components/Imagen/ImagenComponent.vue";
+import PromocionesComponent from "@/components/Promociones/PromocionesComponent.vue";
 import CardEcoComponent from "@/components/Ecologico/CardEcoComponent.vue";
 import GridProgramasComponent from "@/components/Programas/GridProgramasComponent.vue";
 import CarouselComponent from "@/components/Carousel/CarouselComponent.vue";
@@ -40,9 +43,40 @@ export default {
     // HelloWorld,
     TarjetasComponent,
     ImagenComponent,
+    PromocionesComponent,
     CardEcoComponent,
     GridProgramasComponent,
     CarouselComponent,
+  },
+  data() {
+    return {
+      // tiempo: "",
+    };
+  },
+  created() {
+    // this.getTiempo();
+  },
+  methods: {
+    // getTiempo() {
+    //   axios
+    //     .get(
+    //       "https://api.tutiempo.net/json/?lan=es&apid=a5GX44aXXaahzCV&ll=-31.6476686,-63.3444"
+    //     )
+    //     .then((response) => {
+    //       console.log(response);
+    //       this.tiempo = response.data.hour_hour.hour1.temperature;
+    //       let asd = response.data.day1.text;
+    //       let icon = response.data.day1.icon;
+    //       // let dia = new Date();
+    //       // this.dia = dia.getDate();
+    //       // this.getDia(dia.getDay());
+    //       // this.getMes(dia.getMonth());
+    //       // this.text = asd.split(" ");
+    //       // this.text = this.text[0].toUpperCase();
+    //       this.text = asd.toUpperCase();
+    //       this.icono = `https://v5i.tutiempo.net/wi/02/30/${icon}.png`;
+    //     });
+    // },
   },
 };
 </script>
@@ -54,6 +88,7 @@ video {
 .contenedor-home {
   /* padding-top: 100px; */
   background: #f5f5f5;
+  padding-bottom: 3%;
 }
 .linea {
   display: flex;
@@ -89,5 +124,6 @@ video {
   height: 60vh;
   /* background-color: rebeccapurple; */
   align-items: center;
+  /* padding-bottom: 5%; */
 }
 </style>
