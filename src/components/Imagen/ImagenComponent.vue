@@ -37,7 +37,7 @@ h3 {
   background-repeat: no-repeat;
   margin: auto;
   border-radius: 60px 0px 60px 0px;
-  margin-top: 7vh;
+  margin-top: 3%;
   background: linear-gradient(
     272deg,
     #000 -23.75%,
@@ -122,6 +122,7 @@ h3 {
     #ffcc03 55.98%,
     #019939 87.68%
   );
+
   bottom: 0;
 }
 </style>

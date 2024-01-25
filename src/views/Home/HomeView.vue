@@ -83,7 +83,7 @@ export default {
 <style scoped>
 video {
   width: 100%;
-  margin-top: -3.5rem;
+  margin-top: -3.4rem;
 }
 .contenedor-home {
   /* padding-top: 100px; */

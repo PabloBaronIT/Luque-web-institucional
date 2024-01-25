@@ -24,7 +24,7 @@ export default {
   justify-content: center;
   width: 100%;
   height: auto;
-  margin-top: 4%;
+  margin-top: 3%;
 }
 .imagenderecha {
   height: 100%;

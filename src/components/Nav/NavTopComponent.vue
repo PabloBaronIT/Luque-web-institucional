@@ -5,8 +5,8 @@
     /></router-link>
     <div class="contenedor">
       <input type="text" name="" id="" v-model="this.valor" />
-      <!-- <i class="bi bi-search lupa"></i> -->
-      <svg
+      <i class="bi bi-search lupa"></i>
+      <!-- <svg
         xmlns="http://www.w3.org/2000/svg"
         width="31"
         height="31"
@@ -31,7 +31,7 @@
             <stop offset="1" stop-color="#FFB900" />
           </linearGradient>
         </defs>
-      </svg>
+      </svg> -->
       <div class="redes-container">
         <a href="">
           <img class="redes" src="@/assets/images/Email.svg" alt="" />
@@ -44,9 +44,10 @@
         </a>
       </div>
       <div class="tiempo">
-        <div class="sol"></div>
-        <h6 style="font-weight: 600">26°</h6>
-        <p style="margin-top: -0.5rem">soleado</p>
+        <!-- <div class="sol"></div> -->
+        <img :src="this.icono" alt="imagen" class="icono" />
+        <h6 style="font-weight: 600">{{ temperatura }}</h6>
+        <p style="margin-top: -0.5rem">{{ tiempo }}</p>
       </div>
     </div>
   </nav>
@@ -152,7 +153,7 @@
   </div> -->
 </template>
 <script>
-// import axios from "axios";
+import axios from "axios";
 
 export default {
   name: "topNavComponent",
@@ -160,39 +161,41 @@ export default {
     return {
       valor: "",
       isSticky: false,
+      temperatura: 0,
       tiempo: "",
+      icono: "",
     };
   },
   mounted() {
     window.addEventListener("scroll", this.handleScroll);
-    // this.getTiempo();
+    this.getTiempo();
   },
   methods: {
     handleScroll() {
       // Verifica la posición de desplazamiento para determinar si se activa el sticky
       this.isSticky = window.scrollY > 100; // Puedes ajustar el valor según tus necesidades
     },
-    // getTiempo() {
-    //   axios
-    //     .get(
-    //       "https://api.tutiempo.net/json/?lan=es&apid=a5GX44aXXaahzCV&ll=-31.6476686,-63.3444"
-    //     )
-    //     .then((response) => {
-    //       console.log(response);
-    //       this.tiempo = response.data.hour_hour.hour1.temperature;
-    //       let asd = response.data.day1.text;
-    //       let icon = response.data.day1.icon;
-    //       // let dia = new Date();
-    //       // this.dia = dia.getDate();
-    //       // this.getDia(dia.getDay());
-    //       // this.getMes(dia.getMonth());
-    //       // this.text = asd.split(" ");
-    //       // this.text = this.text[0].toUpperCase();
-    //       this.text = asd.toUpperCase();
+    getTiempo() {
+      axios
+        .get(
+          "https://api.tutiempo.net/json/?lan=es&apid=a5GX44aXXaahzCV&ll=-31.6476686,-63.3444"
+        )
+        .then((response) => {
+          console.log(response);
+          this.temperatura = response.data.hour_hour.hour1.temperature;
+          this.tiempo = response.data.hour_hour.hour1.text;
+          let icon = response.data.hour_hour.hour1.icon;
+          // let dia = new Date();
+          // this.dia = dia.getDate();
+          // this.getDia(dia.getDay());
+          // this.getMes(dia.getMonth());
+          // this.text = asd.split(" ");
+          // this.text = this.text[0].toUpperCase();
+          // this.text = asd.toUpperCase();
 
-    //       this.icono = `https://v5i.tutiempo.net/wi/02/30/${icon}.png`;
-    //     });
-    // },
+          this.icono = `https://v5i.tutiempo.net/wi/02/30/${icon}.png`;
+        });
+    },
   },
 };
 </script>
@@ -296,7 +299,11 @@ export default {
   padding: 0.5rem 0;
 }
 .tiempo p {
-  font-size: 14px;
+  font-size: 10px;
+}
+.icono {
+  height: 30px;
+  width: 30px;
 }
 .sol {
   width: 29px;
@@ -322,14 +329,14 @@ export default {
   height: 100%;
 }
 input {
-  width: 60%;
+  width: 58%;
   height: 45%;
   border-radius: 16px;
   border: none;
   background: #fff;
 }
 .lupa {
-  color: black;
+  color: #ff2745;
   font-size: 27px;
   position: relative;
   margin-left: -5rem;

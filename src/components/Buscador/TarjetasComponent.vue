@@ -42,42 +42,42 @@ export default {
         {
           titulo: "LICENCIA DE CONDUCIR",
           imagen:
-            "https://res.cloudinary.com/ddko88otf/image/upload/v1703006870/icon-licencia_oelvrg.svg",
+            "https://res.cloudinary.com/ddko88otf/image/upload/v1706206111/icon-licencia_tmokfa.png",
         },
         {
           titulo: "COMERCIO",
           imagen:
-            "https://res.cloudinary.com/ddko88otf/image/upload/v1693345628/Group_10_cozjdd.svg",
+            "https://res.cloudinary.com/ddko88otf/image/upload/v1706206172/icon-habilitaciones_azoanu.png",
         },
         {
           titulo: "ALUMBRADO PÚBLICO",
           imagen:
-            "https://res.cloudinary.com/ddko88otf/image/upload/v1693345591/Group_9_a5nlfm.svg",
+            "https://res.cloudinary.com/ddko88otf/image/upload/v1706206221/icon-alumbrado_vw51wl.png",
         },
         {
           titulo: "CATASTRO Y OBRAS",
           imagen:
-            "https://res.cloudinary.com/ddko88otf/image/upload/v1693256926/Group_j2cw4e.svg",
+            "https://res.cloudinary.com/ddko88otf/image/upload/v1706206267/Frame_6_lyox01.png",
         },
         {
           titulo: "REGISTRO CIVIL",
           imagen:
-            "https://res.cloudinary.com/ddko88otf/image/upload/v1701805280/icon-registro_eoepes.svg",
+            "https://res.cloudinary.com/ddko88otf/image/upload/v1706206318/icon-registro_duivid.png",
         },
         {
           titulo: "CALLES Y VEREDAS",
           imagen:
-            "https://res.cloudinary.com/ddko88otf/image/upload/v1693341288/Group_6_x0z8lh.svg",
+            "https://res.cloudinary.com/ddko88otf/image/upload/v1706206364/icon-calles_yhfcha.png",
         },
         {
           titulo: "PROVEEDORES MUNICIPALES",
           imagen:
-            "https://res.cloudinary.com/ddko88otf/image/upload/v1693257709/Group_4_l3ked2.svg",
+            "https://res.cloudinary.com/ddko88otf/image/upload/v1706206405/icon-proveedores_jifoss.png",
         },
         {
           titulo: "PAGOS",
           imagen:
-            "https://res.cloudinary.com/ddko88otf/image/upload/v1693256771/Vector_cfrwyo.svg",
+            "https://res.cloudinary.com/ddko88otf/image/upload/v1706206476/icon-peso_lzme9t.png",
         },
       ],
     };

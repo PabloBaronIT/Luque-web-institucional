@@ -33,7 +33,7 @@
       </div>
     </div>
     <div class="texto">
-      <h4>{{ this.data.descripcion }}</h4>
+      <h5>{{ this.data.descripcion }}</h5>
       <p style="color: #019939">Leer más</p>
     </div>
   </div>
@@ -58,25 +58,27 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /* border: solid 1px black; */
+  border: solid 1px black;
   width: 90%;
   margin: auto;
   margin-bottom: 5%;
   height: 30%;
   /* color: black; */
+  text-overflow: ellipsis;
 }
 .imagen {
   height: 100%;
-  width: 33%;
+  width: 34%;
   border-radius: 20px;
 }
 .texto {
   background: #fff;
   width: 45%;
+  height: 100%;
   border-radius: 20px;
   padding: 2% 2%;
 }
-h4 {
+h5 {
   font-weight: 400;
   font-size: 22px;
 }

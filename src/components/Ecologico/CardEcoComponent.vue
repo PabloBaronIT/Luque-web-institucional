@@ -29,7 +29,7 @@ export default {
   max-height: 169px;
   width: 100%;
   margin: auto;
-  margin-top: 4%;
+  margin-top: 3%;
   padding: 1rem;
 }
 .medio {

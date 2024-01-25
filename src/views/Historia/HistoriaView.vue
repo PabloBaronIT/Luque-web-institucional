@@ -48,6 +48,7 @@ export default {
 .historia-container {
   /* margin-top: -4%; */
   /* padding-top: ; */
+  margin-top: 3%;
   position: relative;
   background: #ffffff;
 }

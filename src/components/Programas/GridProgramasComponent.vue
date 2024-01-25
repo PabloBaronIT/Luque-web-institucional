@@ -78,7 +78,7 @@ export default {
   grid-template-rows: repeat(2, 1fr); /* Crea 3 filas de altura fija de 100px */
   gap: 25px;
   margin: auto;
-  margin-bottom: 10vh;
+  /* margin-bottom: 10vh; */
   width: 80%;
   /* background: rebeccapurple; */
   /* background: linear-gradient(
