@@ -61,4 +61,31 @@ export default {
   font-weight: 700;
   letter-spacing: 1px;
 }
+@media (max-width: 500px) {
+  .medio {
+    width: 100%;
+  }
+  .text h3 {
+    font-weight: 700;
+    font-size: 10px;
+  }
+  .text p {
+    font-size: 8px;
+    /* margin-top: -0.7rem; */
+    font-weight: 400;
+  }
+  .logo {
+    width: 35%;
+    /* height: 25px; */
+  }
+  .eco-contenedor {
+    width: 90%;
+    margin: auto;
+    margin-top: 3%;
+    border-radius: 8px;
+  }
+  .text {
+    width: 60%;
+  }
+}
 </style>

@@ -3,6 +3,12 @@
     <router-link to="/"
       ><img src="@/assets/images/LogoLuque.svg" alt="" class="logo-muni"
     /></router-link>
+    <router-link to="/"
+      ><img
+        src="@/assets/images/LogoBlancoLuque.svg"
+        alt=""
+        class="logo-muni-mobile"
+    /></router-link>
     <div class="contenedor">
       <input type="text" name="" id="" v-model="this.valor" />
       <i class="bi bi-search lupa"></i>
@@ -41,6 +47,18 @@
         </a>
         <a href="">
           <img class="redes" src="@/assets/images/Facebook.svg" alt="" />
+        </a>
+      </div>
+      <!-- MOBILE -->
+      <div class="redes-container-mobile">
+        <a href="">
+          <img class="redes" src="@/assets/images/Lupa.svg" alt="" />
+        </a>
+        <a href="">
+          <img class="redes" src="@/assets/images/InstagramB.svg" alt="" />
+        </a>
+        <a href="">
+          <img class="redes" src="@/assets/images/FacebookB.svg" alt="" />
         </a>
       </div>
       <div class="tiempo">
@@ -200,12 +218,13 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .logo-muni {
   width: 180px;
 }
-</style>
-<style scoped>
+.logo-muni-mobile {
+  visibility: hidden;
+}
 .asd {
   opacity: 1;
   z-index: 200;
@@ -287,6 +306,9 @@ export default {
   justify-content: space-between;
   /* margin-left: -2rem; */
 }
+.redes-container-mobile {
+  visibility: hidden;
+}
 .tiempo {
   width: 12%;
   background: white;
@@ -342,14 +364,54 @@ input {
   margin-left: -5rem;
   /* margin-top: 1%; */
 }
-@media (max-width: 800px) {
-  .contenedor {
-    width: 40vw;
+@media (max-width: 500px) {
+  .top-nav-container {
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      #00c3a8 0.01%,
+      #ffb900 54.81%,
+      #ff2745 104.96%
+    );
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .botones {
+    visibility: hidden;
+  }
+  .logo-muni {
+    width: 107px;
+    height: 32px;
+  }
+  .tiempo,
+  .lupa,
+  input {
+    visibility: hidden;
+  }
+  .redes-container-mobile {
+    visibility: visible;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: #00c3a8; */
+  }
+  .redes-container {
+    visibility: hidden;
+  }
+  .logo-muni {
+    visibility: hidden;
+  }
+  .logo-muni-mobile {
+    visibility: visible;
+    width: 107px;
+    margin-left: -5rem;
   }
 }
 @media (max-width: 1200px) {
   .contenedor {
-    width: 50vw;
+    /* width: 50vw; */
   }
 }
 </style>

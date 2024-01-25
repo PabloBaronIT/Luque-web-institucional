@@ -28,11 +28,11 @@ export default {
 }
 .imagenderecha {
   height: 100%;
-  width: 33%;
+  width: 37%;
   margin-right: 2%;
 }
 .imagenIzquierda {
   /* height: 100%; */
-  width: 47%;
+  width: 50%;
 }
 </style>

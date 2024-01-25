@@ -38,7 +38,7 @@
         </div>
       </div>
       <div>
-        <img src="./../../assets/images/LogoBlancoLuque.svg.svg" alt="logo" />
+        <img src="./../../assets/images/LogoBlancoLuque.svg" alt="logo" />
       </div>
       <!-- <h5 style="font-weight: 700; font-size: 24px">
         TELÉFONOS ÚTILES - ATENCIÓN 24 HS

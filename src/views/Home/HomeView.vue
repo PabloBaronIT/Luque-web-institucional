@@ -126,4 +126,25 @@ video {
   align-items: center;
   /* padding-bottom: 5%; */
 }
+@media (max-width: 500px) {
+  .contenedor-home {
+    width: 100%;
+    /* width: 40vw; */
+  }
+  .linea {
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+  }
+  .linea h5 {
+    font-size: 8px;
+    font-weight: 400;
+  }
+  .izquierdo {
+    width: 30%;
+  }
+  .derecho {
+    width: 30%;
+  }
+}
 </style>

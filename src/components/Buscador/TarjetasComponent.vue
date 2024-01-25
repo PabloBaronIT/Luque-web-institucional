@@ -9,6 +9,21 @@
       </div>
     </div>
     <h1>Gestiones más consultadas</h1>
+    <!-- MOBILE -->
+    <div class="carousel-mobile">
+      <carousel :items-to-show="3" :wrapAround="true" :transition="500">
+        <slide v-for="slide in this.gestiones" :key="slide">
+          <router-link to="/historia" class="interior">
+            <h5>{{ slide.titulo }}</h5>
+          </router-link>
+        </slide>
+
+        <template #addons>
+          <!-- <navigation /> -->
+        </template>
+      </carousel>
+    </div>
+    <!-- WEB -->
     <div class="gridcontainer">
       <div
         v-for="(item, index) in gestiones"
@@ -30,11 +45,13 @@
   </div>
 </template>
 <script>
-// import CaroulselTarjetasComponent from "@/components/Carousel/CarouselTarjetasComponent.vue";
+import { Carousel, Slide } from "vue3-carousel";
 export default {
   name: "TarjetasComponent",
   components: {
-    // CaroulselTarjetasComponent,
+    Carousel,
+    Slide,
+    // Navigation,
   },
   data() {
     return {
@@ -156,7 +173,7 @@ input {
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
   margin: auto;
-  margin-top: 3%;
+  /* margin-top: 3%; */
   grid-auto-rows: minmax(110px, auto);
   width: 85%;
   margin-bottom: 3%;
@@ -232,5 +249,81 @@ h5 {
   font-weight: 600;
   line-height: normal;
   color: #fff;
+}
+
+.carousel-mobile {
+  visibility: hidden;
+}
+@media (max-width: 500px) {
+  .top {
+    width: 100%;
+    background: #00c3a8;
+    height: 31px;
+  }
+  .contenedor {
+    padding-top: 0;
+    width: 90%;
+    height: 130px;
+    border-radius: 15px 0px 0px 0px;
+  }
+  .contenedor h1 {
+    font-size: 14px;
+    visibility: hidden;
+  }
+  .buscador {
+    visibility: hidden;
+  }
+  h5 {
+    color: #4b4a49;
+    font-weight: 700;
+  }
+  .carousel-mobile {
+    visibility: visible;
+    width: 100%;
+    margin-top: -1rem;
+  }
+  .gridcontainer {
+    visibility: hidden;
+  }
+  .masGestiones {
+    position: relative;
+  }
+  .carousel {
+    width: 100%;
+    height: 100%;
+    /* margin: auto; */
+    /* padding-left: 3rem; */
+    /* padding-right: 3rem; */
+  }
+  .carousel__slide {
+    padding: 0.3rem 0.3rem;
+    background: #fff;
+    max-height: 6rem;
+    max-width: 70%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 0.5rem;
+    /* width: 18 vw; */
+    /* width: 10vw; */
+  }
+  .carousel__slide:hover {
+    background: linear-gradient(180deg, #019939 4.26%, #ffcc03 126.04%);
+  }
+  .interior {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    border-radius: 17px;
+    text-align: center;
+    /* padding: 1.5rem 1.5rem; */
+    text-decoration: none;
+    text-align: center;
+  }
+  .interior h5 {
+    font-size: 14px;
+  }
+  .interior h5:hover {
+    color: #019939;
+  }
 }
 </style>
