@@ -265,6 +265,7 @@ h5 {
     width: 90%;
     height: 130px;
     border-radius: 15px 0px 0px 0px;
+    /* padding-bottom: 3rem; */
   }
   .contenedor h1 {
     font-size: 14px;
@@ -280,13 +281,15 @@ h5 {
   .carousel-mobile {
     visibility: visible;
     width: 100%;
+    height: auto;
     margin-top: -1rem;
   }
   .gridcontainer {
     visibility: hidden;
   }
   .masGestiones {
-    position: relative;
+    width: 40%;
+    height: auto;
   }
   .carousel {
     width: 100%;
