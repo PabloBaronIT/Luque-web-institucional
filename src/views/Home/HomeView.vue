@@ -49,35 +49,9 @@ export default {
     CarouselComponent,
   },
   data() {
-    return {
-      // tiempo: "",
-    };
+    return {};
   },
-  created() {
-    // this.getTiempo();
-  },
-  methods: {
-    // getTiempo() {
-    //   axios
-    //     .get(
-    //       "https://api.tutiempo.net/json/?lan=es&apid=a5GX44aXXaahzCV&ll=-31.6476686,-63.3444"
-    //     )
-    //     .then((response) => {
-    //       console.log(response);
-    //       this.tiempo = response.data.hour_hour.hour1.temperature;
-    //       let asd = response.data.day1.text;
-    //       let icon = response.data.day1.icon;
-    //       // let dia = new Date();
-    //       // this.dia = dia.getDate();
-    //       // this.getDia(dia.getDay());
-    //       // this.getMes(dia.getMonth());
-    //       // this.text = asd.split(" ");
-    //       // this.text = this.text[0].toUpperCase();
-    //       this.text = asd.toUpperCase();
-    //       this.icono = `https://v5i.tutiempo.net/wi/02/30/${icon}.png`;
-    //     });
-    // },
-  },
+  created() {},
 };
 </script>
 <style scoped>
@@ -127,6 +101,9 @@ video {
   /* padding-bottom: 5%; */
 }
 @media (max-width: 500px) {
+  .carouselNoticias {
+    height: 30%;
+  }
   .contenedor-home {
     width: 100%;
     /* width: 40vw; */

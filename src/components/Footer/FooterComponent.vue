@@ -37,8 +37,17 @@
           <h6>BOMBEROS</h6>
         </div>
       </div>
-      <div>
+      <div class="logo">
         <img src="./../../assets/images/LogoBlancoLuque.svg" alt="logo" />
+      </div>
+      <div class="foterMobile">
+        <img src="./../../assets/images/LogoBlancoLuque.svg" alt="logo" />
+        <div class="direccionMobile">
+          <h5>
+            Municipalidad de Luque 9 de julio 806, Luque, Córdoba CP X5967 TEL.:
+            03573 48-0113
+          </h5>
+        </div>
       </div>
       <!-- <h5 style="font-weight: 700; font-size: 24px">
         TELÉFONOS ÚTILES - ATENCIÓN 24 HS
@@ -145,5 +154,60 @@ h1 {
   font-weight: 300;
   line-height: normal;
   letter-spacing: 1px;
+}
+.foterMobile {
+  visibility: hidden;
+}
+@media (max-width: 500px) {
+  footer {
+    height: 161px;
+
+    /* display: flex; */
+    /* flex-direction: column; */
+  }
+  .telefonos-container {
+    display: flex;
+    flex-direction: column;
+    height: 161px;
+    width: 100%;
+  }
+  .telefonos {
+    height: 60%;
+    width: 100%;
+    background: rebeccapurple;
+  }
+  h1 {
+    font-size: 26px;
+  }
+  .asd {
+    font-size: 16px;
+  }
+  .logo {
+    visibility: hidden;
+  }
+  .foterMobile {
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 2rem;
+    margin-top: -5rem;
+  }
+  .foterMobile img {
+    width: 50%;
+  }
+  .direccionMobile {
+    width: 42%;
+    color: white;
+  }
+  .direccionMobile h5 {
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+  .direccion {
+    visibility: hidden;
+  }
 }
 </style>

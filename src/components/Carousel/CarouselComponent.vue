@@ -10,7 +10,7 @@
 
       <div class="interior-titulo" style="text-align: left">
         <router-link to="/historia">
-          <p style="font-size: 13px; font-weight: 600">
+          <p class="fecha">
             {{ new Date().toLocaleDateString() }}
           </p>
           <p style="margin-top: -0.5rem">{{ slide.titulo }}</p>
@@ -78,7 +78,7 @@ export default {
   /* background: red; */
 }
 .carousel__slide {
-  /* padding: 0 0.5rem; */
+  padding: 0 0.5rem;
   background: #fff;
   height: 50vh;
   border-radius: 30px 0px;
@@ -87,7 +87,7 @@ export default {
   flex-direction: column;
   text-align: left;
   margin: auto;
-  padding-left: 1rem;
+  /* padding-left: 1rem; */
 
   /* width: 18 vw; */
   /* width: 10vw; */
@@ -151,6 +151,51 @@ img {
   width: 100%;
   /* margin: auto; */
   text-align: left;
+  padding-left: 1rem;
   margin-top: 0.5rem;
+}
+.fecha {
+  font-size: 13px;
+  font-weight: 600;
+}
+@media (max-width: 500px) {
+  .contenedor {
+    height: 195px;
+    width: 100%;
+  }
+  .slide {
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+  /* .carousel {
+    height: 195px;
+    width: 100%;
+  } */
+  .carousel__slide {
+    height: 142px;
+    padding: 0;
+    border-radius: 16px;
+    /* padding: 0 0.5rem; */
+  }
+  .carousel__slide--active {
+    height: 142px;
+    margin: 1.5rem 2.5rem;
+    padding-top: 3px;
+  }
+  .carousel__slide--next {
+    /* padding-top: 0.2rem; */
+  }
+  .interior-titulo p {
+    font-size: 8px;
+  }
+  .interior-titulo {
+    padding-left: 0.5rem;
+  }
+  img {
+    height: 45%;
+    width: 95%;
+    border-radius: 16px;
+  }
 }
 </style>
