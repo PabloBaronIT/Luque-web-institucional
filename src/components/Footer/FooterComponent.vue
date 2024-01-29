@@ -2,14 +2,14 @@
   <footer>
     <div class="telefonos-container">
       <div class="telefonos">
-        <div class="telefono">
+        <div class="telefono" name="primero">
           <div style="display: flex; align-items: center">
             <i class="bi bi-telephone-fill asd"></i>
             <h1>111</h1>
           </div>
           <h6>HOSPITAL</h6>
         </div>
-        <div class="linea"></div>
+        <div class="linea" name="primero"></div>
         <div class="telefono">
           <div style="display: flex; align-items: center">
             <i class="bi bi-telephone-fill asd"></i>
@@ -24,7 +24,7 @@
         <div class="telefono">
           <div style="display: flex; align-items: center">
             <i class="bi bi-telephone-fill asd"></i>
-            <h1>102</h1>
+            <h1>101</h1>
           </div>
           <h6>POLICÍA</h6>
         </div>
@@ -49,23 +49,6 @@
           </h5>
         </div>
       </div>
-      <!-- <h5 style="font-weight: 700; font-size: 24px">
-        TELÉFONOS ÚTILES - ATENCIÓN 24 HS
-      </h5> -->
-      <!-- <div class="telefonos">
-        <div style="text-align: center">
-          <h4>HOSPITAL</h4>
-          <h1 class="numeros">111</h1>
-        </div>
-        <div style="text-align: center">
-          <h4>ATENCIÓN AL VECINO</h4>
-          <h1 class="numeros">147</h1>
-        </div>
-        <div style="text-align: center">
-          <h4>POLICíA</h4>
-          <h1 class="numeros">102</h1>
-        </div>
-      </div> -->
     </div>
     <h5 class="direccion">
       Municipalidad de Luque | 9 de julio 806, Luque, Córdoba | CP X5967 | TEL.:
@@ -95,7 +78,7 @@ footer {
   height: 40vh;
   /* box-shadow: 0px 0px 15px #aaa; */
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   /* padding: 20px; */
   width: 100%;
 }
@@ -121,8 +104,8 @@ h1 {
   width: 88%;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   /* background: rgba(245, 245, 245, 0.15); */
   /* backdrop-filter: blur(7.5px); */
   /* border-radius: 50px 0px; */
@@ -156,25 +139,31 @@ h1 {
   letter-spacing: 1px;
 }
 .foterMobile {
-  visibility: hidden;
+  display: none;
 }
 @media (max-width: 500px) {
   footer {
     height: 161px;
-
+    /* margin-top: 5%; */
     /* display: flex; */
     /* flex-direction: column; */
   }
   .telefonos-container {
     display: flex;
     flex-direction: column;
-    height: 161px;
+    justify-content: center;
+    height: 165px;
     width: 100%;
+    margin-top: -2rem;
   }
   .telefonos {
-    height: 60%;
-    width: 100%;
-    background: rebeccapurple;
+    height: 30%;
+    width: 80%;
+    margin: auto;
+  }
+  .telefono h6 {
+    font-size: 10px;
+    font-weight: 400;
   }
   h1 {
     font-size: 26px;
@@ -183,15 +172,15 @@ h1 {
     font-size: 16px;
   }
   .logo {
-    visibility: hidden;
+    display: none;
   }
   .foterMobile {
     visibility: visible;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-left: 2rem;
-    margin-top: -5rem;
+    align-items: center;
+    padding-left: 1rem;
   }
   .foterMobile img {
     width: 50%;
@@ -207,7 +196,10 @@ h1 {
     line-height: normal;
   }
   .direccion {
-    visibility: hidden;
+    display: none;
+  }
+  [name="primero"] {
+    display: none;
   }
 }
 </style>

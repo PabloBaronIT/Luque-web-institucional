@@ -307,7 +307,7 @@ export default {
   /* margin-left: -2rem; */
 }
 .redes-container-mobile {
-  visibility: hidden;
+  display: none;
 }
 .tiempo {
   width: 12%;
@@ -401,17 +401,14 @@ input {
     visibility: hidden;
   }
   .logo-muni {
-    visibility: hidden;
+    display: none;
   }
   .logo-muni-mobile {
     visibility: visible;
     width: 107px;
-    margin-left: -5rem;
+    /* margin-left: -5rem; */
   }
 }
 @media (max-width: 1200px) {
-  .contenedor {
-    /* width: 50vw; */
-  }
 }
 </style>

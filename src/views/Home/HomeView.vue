@@ -95,17 +95,21 @@ video {
   margin-bottom: 1%;
 }
 .carouselNoticias {
-  height: 60vh;
+  /* height: 60vh; */
   /* background-color: rebeccapurple; */
   align-items: center;
   /* padding-bottom: 5%; */
 }
 @media (max-width: 500px) {
   .carouselNoticias {
-    height: 30%;
+    /* height: auto; */
+    /* position: relative; */
+    margin-top: 5%;
   }
   .contenedor-home {
     width: 100%;
+    height: 100%;
+    /* padding-bottom: 1rem; */
     /* width: 40vw; */
   }
   .linea {

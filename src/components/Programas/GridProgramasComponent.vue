@@ -196,7 +196,7 @@ a {
 
 @media (max-width: 500px) {
   .grid {
-    visibility: hidden;
+    display: none;
     width: 100%;
   }
   .contenedor {
@@ -213,7 +213,7 @@ a {
     width: 100%;
     height: 100%;
     margin: auto;
-    margin-top: -20rem;
+    /* margin-top: -20rem; */
 
     /* margin-bottom: 10%; */
     /* padding: 0 0; */
