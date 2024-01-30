@@ -3,36 +3,42 @@
     <router-link to="/"
       ><img src="@/assets/images/LogoLuque.svg" alt="" class="logo-muni"
     /></router-link>
-    <div class="dropdown">
-      <button
-        class="btn btn-secondary dropdown"
-        type="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
+    <i class="bi bi-list burguer" @click="this.setMenu"> </i>
+    <div class="menu" v-if="this.menu">
+      <div
+        class="item-menu"
+        @click="this.setSubMenu(index)"
+        v-for="(item, index) in this.ListMenu"
+        :key="index"
       >
-        Dropdown button
-      </button>
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <div class="dropdown">
-          <button
-            class="btn btn-secondary dropend"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
+        <h6>
+          {{ item.titulo }}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="10"
+            height="10"
+            viewBox="0 0 10 10"
+            fill="none"
           >
-            Dropdown button
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+            <path
+              d="M2.1875 3.59375L5 6.40625L7.8125 3.59375"
+              stroke="#3E3E3E"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </h6>
+        <div
+          class="item-subMenu"
+          v-if="this.open === true && this.itemSelect === index"
+        >
+          <h6 v-for="(item, index) in item.subtitulos" :key="index">
+            {{ item }}
+          </h6>
         </div>
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-      </ul>
+        <div class="linea-menu"></div>
+      </div>
     </div>
     <router-link to="/"
       ><img
@@ -214,6 +220,36 @@ export default {
       temperatura: 0,
       tiempo: "",
       icono: "",
+      menu: false,
+      open: false,
+      itemSelect: null,
+      ListMenu: [
+        {
+          titulo: "EL PUEBLO",
+          subtitulos: [
+            "Nuestra Historia",
+            "Luque Hoy",
+            "Descubrí Luque",
+            "Fiesta Nacional",
+          ],
+          open: false,
+        },
+        {
+          titulo: "NUESTRO GOBIERNO",
+          subtitulos: ["asd", "asdasd", "asdasdasdasd"],
+          open: false,
+        },
+        {
+          titulo: "SERVICIO AL VECINO",
+          subtitulos: ["asd", "asdasd", "asdasdasdasd"],
+          open: false,
+        },
+        {
+          titulo: "NOVEDADES",
+          subtitulos: ["asd", "asdasd", "asdasdasdasd"],
+          open: false,
+        },
+      ],
     };
   },
   mounted() {
@@ -246,6 +282,15 @@ export default {
           this.icono = `https://v5i.tutiempo.net/wi/02/30/${icon}.png`;
         });
     },
+    setMenu() {
+      this.menu = !this.menu;
+    },
+    setSubMenu(index) {
+      console.log("soy el indice");
+      this.itemSelect = index;
+      this.open = !this.open;
+      // this.ListMenu[index].open = true;
+    },
   },
 };
 </script>
@@ -274,7 +319,7 @@ export default {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  padding: 0% 1.5%;
+  padding-right: 1.5%;
   background: #f5f5f5;
   /* position: fixed; */
   /* z-index: 15; */
@@ -402,11 +447,68 @@ input {
   margin-left: -5rem;
   /* margin-top: 1%; */
 }
+.menu {
+  display: none;
+}
 @media (max-width: 500px) {
   .burguer {
-    display: inline;
+    /* visibility: visible; */
+    display: block;
     color: white;
-    font-size: 25px;
+    font-size: 30px;
+  }
+  .menu {
+    display: block;
+    position: absolute;
+    top: 6%;
+    width: 100%;
+    height: auto;
+    background: #fff;
+    z-index: 15;
+  }
+  .menu h6 {
+    color: #3e3e3e;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .item-menu {
+    /* border-bottom: 1px solid #00c3a8; */
+    /* border-bottom-color: linear-gradient(
+      90deg,
+      #00c3a8 0.01%,
+      #ffb900 54.81%,
+      #ff2745 104.96%
+    ); */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    height: auto;
+    padding-left: 5%;
+  }
+  .linea-menu {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      #00c3a8 0.01%,
+      #ffb900 54.81%,
+      #ff2745 104.96%
+    );
+    width: 95%;
+    position: absolute;
+    bottom: 0;
+    left: 2%;
+  }
+  .item-subMenu {
+    /* display: block; */
+    position: relative;
+    /* top: 6%; */
+    padding-left: 5%;
+    width: 100%;
+    height: auto;
+    background: #fff;
   }
   .top-nav-container {
     width: 100%;
@@ -423,6 +525,8 @@ input {
   }
   .botones {
     visibility: hidden;
+
+    /* display: none; */
   }
   .logo-muni {
     width: 107px;
@@ -449,21 +553,7 @@ input {
   .logo-muni-mobile {
     visibility: visible;
     width: 107px;
-    /* margin-left: -5rem; */
-  }
-
-  .dropdown:hover > .dropdown-menu,
-  .dropend:hover > .dropdown-menu {
-    /* background: red; */
-    /* visibility: visible; */
-    display: block;
-    margin-top: 0.125rem;
-  }
-  .dropend:hover > .dropdown-menu {
-    position: absolute;
-    top: 0;
-    left: 100%0;
-    margin-left: 0.125rem;
+    margin-left: -1rem;
   }
 }
 @media (max-width: 1200px) {
