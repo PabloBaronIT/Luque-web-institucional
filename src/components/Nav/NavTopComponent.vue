@@ -3,12 +3,44 @@
     <router-link to="/"
       ><img src="@/assets/images/LogoLuque.svg" alt="" class="logo-muni"
     /></router-link>
+    <div class="dropdown">
+      <button
+        class="btn btn-secondary dropdown"
+        type="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        Dropdown button
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropend"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Dropdown button
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+      </ul>
+    </div>
     <router-link to="/"
       ><img
         src="@/assets/images/LogoBlancoLuque.svg"
         alt=""
         class="logo-muni-mobile"
     /></router-link>
+
     <div class="contenedor">
       <input type="text" name="" id="" v-model="this.valor" />
       <i class="bi bi-search lupa"></i>
@@ -219,6 +251,12 @@ export default {
 </script>
 
 <style scoped>
+/* .bi {
+  display: none;
+} */
+.burguer {
+  display: none;
+}
 .logo-muni {
   width: 180px;
 }
@@ -365,6 +403,11 @@ input {
   /* margin-top: 1%; */
 }
 @media (max-width: 500px) {
+  .burguer {
+    display: inline;
+    color: white;
+    font-size: 25px;
+  }
   .top-nav-container {
     width: 100%;
     background: linear-gradient(
@@ -388,11 +431,11 @@ input {
   .tiempo,
   .lupa,
   input {
-    visibility: hidden;
+    display: none;
   }
   .redes-container-mobile {
     visibility: visible;
-    width: 60%;
+    width: 50%;
     display: flex;
     justify-content: space-between;
     /* background-color: #00c3a8; */
@@ -407,6 +450,20 @@ input {
     visibility: visible;
     width: 107px;
     /* margin-left: -5rem; */
+  }
+
+  .dropdown:hover > .dropdown-menu,
+  .dropend:hover > .dropdown-menu {
+    /* background: red; */
+    /* visibility: visible; */
+    display: block;
+    margin-top: 0.125rem;
+  }
+  .dropend:hover > .dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 100%0;
+    margin-left: 0.125rem;
   }
 }
 @media (max-width: 1200px) {
