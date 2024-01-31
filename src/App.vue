@@ -25,13 +25,15 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #ffffff;
-  width: 100%;
+
+  width: 100vw;
   /* text-align: center; */
   /* color: #2c3e50; */
 }
+
 @media (max-width: 500px) {
   #app {
-    width: 100%;
+    width: 100vw;
     height: auto;
     font-family: "Montserrat", sans-serif;
     -webkit-font-smoothing: antialiased;

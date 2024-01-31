@@ -323,7 +323,7 @@ h5 {
     text-align: center;
   }
   .interior h5 {
-    font-size: 14px;
+    font-size: 12px;
   }
   .interior h5:hover {
     color: #019939;

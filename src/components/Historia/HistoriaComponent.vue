@@ -63,4 +63,10 @@ export default {
   margin-top: 3%;
   padding: 6% 3%;
 }
+@media (max-width: 500px) {
+  .contenedor {
+    border-radius: 0px 0px;
+    margin-top: -2rem;
+  }
+}
 </style>

@@ -1,9 +1,5 @@
 <template>
   <div class="historia-container">
-    <!-- <Flyer
-        :src="'https://www.jesusmaria.gov.ar/frontend/images/bg-motiva.jpg'"
-        :text="'Noticias'"
-      /> -->
     <div class="linea">
       <div class="izquierdo"></div>
       <h5>NUESTRA HISTORIA</h5>
@@ -31,12 +27,10 @@
 <script>
 import HistoriaComponentVue from "@/components/Historia/HistoriaComponent.vue";
 // import Historia from "@/components/Ciudad/LineaComponent.vue";
-// import Flyer from "@/components/Reutilizar/FlyerComponent.vue";
 export default {
   name: "HistoriaView",
   components: {
     HistoriaComponentVue,
-    // Flyer,
   },
   created() {
     window.scrollTo(0, 0);
@@ -48,6 +42,7 @@ export default {
 .historia-container {
   /* margin-top: -4%; */
   /* padding-top: ; */
+  width: 100%;
   margin-top: 3%;
   position: relative;
   background: #ffffff;
@@ -116,5 +111,43 @@ export default {
   margin-top: 2.5vh;
   margin-left: 1vw;
   margin-right: 1vw;
+}
+
+@media (max-width: 500px) {
+  .linea {
+    /* text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%; */
+    display: none;
+  }
+  .volver {
+    width: 10%;
+    right: 2%;
+    bottom: -4%;
+    /* background: red; */
+  }
+  .volver h4 {
+    display: none;
+  }
+  .volver img {
+    width: 32px;
+    height: 32px;
+  }
+  .linea h5 {
+    font-size: 8px;
+    font-weight: 400;
+  }
+  .izquierdo {
+    width: 30%;
+  }
+  .derecho {
+    width: 30%;
+  }
+  .textoUltimo h4 {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 }
 </style>

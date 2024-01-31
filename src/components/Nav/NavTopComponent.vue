@@ -1,9 +1,15 @@
 <template>
-  <nav class="top-nav-container">
+  <nav class="contenedor-nav">
+    <i class="bi bi-list burguer" @click="this.setMenu"> </i>
     <router-link to="/"
       ><img src="@/assets/images/LogoLuque.svg" alt="" class="logo-muni"
     /></router-link>
-    <i class="bi bi-list burguer" @click="this.setMenu"> </i>
+    <router-link to="/"
+      ><img
+        src="@/assets/images/LogoBlancoLuque.svg"
+        alt=""
+        class="logo-mobile"
+    /></router-link>
     <div class="menu" v-if="this.menu">
       <div
         class="item-menu"
@@ -33,49 +39,26 @@
           class="item-subMenu"
           v-if="this.open === true && this.itemSelect === index"
         >
-          <h6 v-for="(item, index) in item.subtitulos" :key="index">
-            {{ item }}
-          </h6>
+          <router-link
+            :to="item.link"
+            class="link"
+            @click="this.setMenu"
+            v-for="(item, index) in item.subtitulos"
+            :key="index"
+          >
+            <h6>
+              {{ item.titulo }}
+            </h6>
+          </router-link>
         </div>
         <div class="linea-menu"></div>
       </div>
     </div>
-    <router-link to="/"
-      ><img
-        src="@/assets/images/LogoBlancoLuque.svg"
-        alt=""
-        class="logo-muni-mobile"
-    /></router-link>
 
     <div class="contenedor">
       <input type="text" name="" id="" v-model="this.valor" />
       <i class="bi bi-search lupa"></i>
-      <!-- <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="31"
-        height="31"
-        viewBox="0 0 31 31"
-        fill="none"
-        class="lupa"
-      >
-        <path
-          d="M27.6512 25.5138L21.9543 19.817C23.3258 17.9911 24.0662 15.7686 24.0638 13.485C24.0638 7.65191 19.3181 2.90625 13.485 2.90625C7.65191 2.90625 2.90625 7.65191 2.90625 13.485C2.90625 19.3181 7.65191 24.0638 13.485 24.0638C15.7686 24.0662 17.9911 23.3258 19.817 21.9543L25.5138 27.6512C25.8022 27.9089 26.1783 28.0465 26.565 28.0357C26.9516 28.0249 27.3195 27.8665 27.593 27.593C27.8665 27.3195 28.0249 26.9516 28.0357 26.565C28.0465 26.1783 27.9089 25.8022 27.6512 25.5138ZM5.92875 13.485C5.92875 11.9905 6.37192 10.5296 7.20221 9.28697C8.0325 8.04435 9.21262 7.07585 10.5933 6.50394C11.9741 5.93202 13.4934 5.78238 14.9592 6.07394C16.4249 6.3655 17.7713 7.08516 18.8281 8.14192C19.8848 9.19869 20.6045 10.5451 20.8961 12.0108C21.1876 13.4766 21.038 14.9959 20.4661 16.3767C19.8942 17.7574 18.9256 18.9375 17.683 19.7678C16.4404 20.5981 14.9795 21.0413 13.485 21.0413C11.4817 21.0388 9.56113 20.242 8.14458 18.8254C6.72803 17.4089 5.93115 15.4883 5.92875 13.485Z"
-          fill="url(#paint0_linear_8_242)"
-        />
-        <defs>
-          <linearGradient
-            id="paint0_linear_8_242"
-            x1="27.7708"
-            y1="2.58333"
-            x2="-4.52083"
-            y2="27.7708"
-            gradientUnits="userSpaceOnUse"
-          >
-            <stop stop-color="#FF2745" />
-            <stop offset="1" stop-color="#FFB900" />
-          </linearGradient>
-        </defs>
-      </svg> -->
+
       <div class="redes-container">
         <a href="">
           <img class="redes" src="@/assets/images/Email.svg" alt="" />
@@ -100,7 +83,6 @@
         </a>
       </div>
       <div class="tiempo">
-        <!-- <div class="sol"></div> -->
         <img :src="this.icono" alt="imagen" class="icono" />
         <h6 style="font-weight: 600">{{ temperatura }}</h6>
         <p style="margin-top: -0.5rem">{{ tiempo }}</p>
@@ -227,27 +209,46 @@ export default {
         {
           titulo: "EL PUEBLO",
           subtitulos: [
-            "Nuestra Historia",
-            "Luque Hoy",
-            "Descubrí Luque",
-            "Fiesta Nacional",
+            { titulo: "Nuestra Historia", link: "/pueblo/historia" },
+            { titulo: "Luque Hoy", link: "/pueblo/luque-hoy" },
+
+            { titulo: "Descubrí Luque", link: "/pueblo/descubri-luque" },
+
+            { titulo: "Fiesta Nacional", link: "/pueblo/fiesta-nacional" },
           ],
-          open: false,
         },
         {
           titulo: "NUESTRO GOBIERNO",
-          subtitulos: ["asd", "asdasd", "asdasdasdasd"],
-          open: false,
+          subtitulos: [
+            { titulo: "Nuestra Historia", link: "/pueblo/historia" },
+            { titulo: "Luque Hoy", link: "/pueblo/luque-hoy" },
+
+            { titulo: "Descubrí Luque", link: "/pueblo/descubri-luque" },
+
+            { titulo: "Fiesta Nacional", link: "/pueblo/fiesta-nacional" },
+          ],
         },
         {
           titulo: "SERVICIO AL VECINO",
-          subtitulos: ["asd", "asdasd", "asdasdasdasd"],
-          open: false,
+          subtitulos: [
+            { titulo: "Nuestra Historia", link: "/pueblo/historia" },
+            { titulo: "Luque Hoy", link: "/pueblo/luque-hoy" },
+
+            { titulo: "Descubrí Luque", link: "/pueblo/descubri-luque" },
+
+            { titulo: "Fiesta Nacional", link: "/pueblo/fiesta-nacional" },
+          ],
         },
         {
           titulo: "NOVEDADES",
-          subtitulos: ["asd", "asdasd", "asdasdasdasd"],
-          open: false,
+          subtitulos: [
+            { titulo: "Nuestra Historia", link: "/pueblo/historia" },
+            { titulo: "Luque Hoy", link: "/pueblo/luque-hoy" },
+
+            { titulo: "Descubrí Luque", link: "/pueblo/descubri-luque" },
+
+            { titulo: "Fiesta Nacional", link: "/pueblo/fiesta-nacional" },
+          ],
         },
       ],
     };
@@ -299,21 +300,25 @@ export default {
 /* .bi {
   display: none;
 } */
+/* nav {
+  width: 100%;
+} */
 .burguer {
   display: none;
 }
 .logo-muni {
   width: 180px;
 }
-.logo-muni-mobile {
-  visibility: hidden;
+.logo-mobile {
+  /* visibility: hidden; */
+  display: none;
 }
-.asd {
+/* .asd {
   opacity: 1;
   z-index: 200;
   color: white;
-}
-.top-nav-container {
+} */
+.contenedor-nav {
   height: 106px;
   display: flex;
   flex-flow: row nowrap;
@@ -349,7 +354,7 @@ export default {
 }
 .fixed {
   position: fixed;
-  z-index: 100;
+  z-index: 15;
   top: 0;
   width: 100%;
   /* max-width: 100%; */
@@ -456,6 +461,7 @@ input {
     display: block;
     color: white;
     font-size: 30px;
+    margin-left: 5%;
   }
   .menu {
     display: block;
@@ -484,9 +490,9 @@ input {
     position: relative;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+    justify-content: center;
     height: auto;
-    padding-left: 5%;
+    padding: 2% 2%;
   }
   .linea-menu {
     height: 1px;
@@ -505,12 +511,18 @@ input {
     /* display: block; */
     position: relative;
     /* top: 6%; */
-    padding-left: 5%;
+    padding: 0% 5%;
     width: 100%;
     height: auto;
     background: #fff;
   }
-  .top-nav-container {
+  .item-subMenu h6 {
+    margin-bottom: 2%;
+  }
+  .contenedor-nav {
+    /* position: fixed; */
+    /* top: 0; */
+    /* z-index: 165; */
     width: 100%;
     background: linear-gradient(
       90deg,
@@ -519,41 +531,47 @@ input {
       #ff2745 104.96%
     );
     height: 56px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: space-between; */
   }
   .botones {
     visibility: hidden;
-
     /* display: none; */
   }
-  .logo-muni {
+  .dropdown {
+    display: none;
+  }
+  /* .logo-muni {
     width: 107px;
     height: 32px;
-  }
+  } */
   .tiempo,
   .lupa,
   input {
     display: none;
   }
+  .contenedor {
+    width: 25%;
+  }
   .redes-container-mobile {
     visibility: visible;
-    width: 50%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     /* background-color: #00c3a8; */
   }
   .redes-container {
-    visibility: hidden;
+    display: none;
   }
   .logo-muni {
     display: none;
   }
-  .logo-muni-mobile {
-    visibility: visible;
+  .logo-mobile {
+    /* visibility: visible; */
+    display: block;
     width: 107px;
-    margin-left: -1rem;
+    margin-left: -60%;
   }
 }
 @media (max-width: 1200px) {

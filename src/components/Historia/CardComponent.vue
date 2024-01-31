@@ -1,7 +1,7 @@
 <template>
   <div class="contenedorcard">
     <img :src="` ${this.data.imagen}`" alt="" class="imagen" />
-    <div style="display: flex; flex-direction: column; align-items: center">
+    <div class="contenedor-fecha">
       <h1 class="fecha">{{ this.data.fecha }}</h1>
       <div style="margin-top: -5%">
         <svg
@@ -54,17 +54,23 @@ export default {
 <style scoped>
 .contenedorcard {
   /* height: 250px; */
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  border: solid 1px black;
+  /* border: solid 1px black; */
   width: 90%;
   margin: auto;
   margin-bottom: 5%;
   height: 30%;
   /* color: black; */
   text-overflow: ellipsis;
+}
+.contenedor-fecha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .imagen {
   height: 100%;
@@ -93,5 +99,47 @@ h5 {
   /* -webkit-background-clip: text; */
   /* -webkit-text-stroke: 0.01px white; */
   /* font-style: normal; */
+}
+@media (max-width: 500px) {
+  .contenedorcard {
+    background: #fff;
+    height: 220px;
+    width: 95%;
+    padding: 0 2% 5% 2%;
+  }
+  .contenedor-fecha {
+    position: absolute;
+    left: 20%;
+    bottom: 0;
+  }
+  .contenedor-fecha svg {
+    display: none;
+  }
+  .imagen {
+    height: 80%;
+    width: 180px;
+  }
+  .fecha {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+  .texto {
+    width: 45%;
+    height: 90%;
+  }
+  .texto h5 {
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .texto p {
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 }
 </style>
