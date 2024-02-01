@@ -2,15 +2,14 @@
   <div class="eco-contenedor">
     <div class="medio">
       <div>
-        <img src="@/assets/images/EcoLogo.svg" alt="" class="logo" />
+        <img src="@/assets/images/EcoLogoMobile.svg" alt="" class="logo" />
       </div>
       <div class="text">
         <h3>¡POR UN PLANETA MÁS VERDE!</h3>
         <p>
           La digitalización es la clave para proteger nuestro planeta. Al
-          reducir el uso de papel y <br />
-          adoptar tecnologías ecoamigables podemos hacer del mundo un lugar más
-          verde y limpio.
+          reducir el uso de papel y adoptar tecnologías ecoamigables podemos
+          hacer del mundo un lugar más verde y limpio.
         </p>
       </div>
     </div>
@@ -33,11 +32,11 @@ export default {
   padding: 1rem;
 }
 .medio {
-  width: 78%;
+  width: 80%;
   height: auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin: auto;
   /* background: red; */
@@ -49,7 +48,7 @@ export default {
 }
 .text {
   text-align: left;
-  width: 85%;
+  width: 80%;
   margin-top: 2%;
 }
 .text p {
@@ -62,12 +61,26 @@ export default {
   letter-spacing: 1px;
 }
 @media (max-width: 500px) {
+  .eco-contenedor {
+    height: 62px;
+    padding: 0px;
+    padding-left: 2%;
+    padding-top: 1%;
+  }
   .medio {
     width: 100%;
+    height: 62px;
+    justify-content: left;
+  }
+  .text {
+    padding: 0% 3%;
+    height: 62px;
+    width: 95%;
   }
   .text h3 {
     font-weight: 700;
     font-size: 10px;
+    margin-bottom: -0.5%;
   }
   .text p {
     font-size: 8px;
@@ -75,17 +88,15 @@ export default {
     font-weight: 400;
   }
   .logo {
-    width: 35%;
-    /* height: 25px; */
+    min-height: 45px;
+    min-width: 45px;
+    margin-bottom: 15%;
   }
   .eco-contenedor {
     width: 90%;
     margin: auto;
     margin-top: 3%;
     border-radius: 8px;
-  }
-  .text {
-    width: 60%;
   }
 }
 </style>

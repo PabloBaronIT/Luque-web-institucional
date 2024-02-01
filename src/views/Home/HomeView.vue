@@ -8,6 +8,9 @@
       type="video/webm"
     ></video>
     <TarjetasComponent />
+    <div class="masGestiones">
+      <p>Ingresá aquí para más gestiones</p>
+    </div>
     <ImagenComponent />
     <PromocionesComponent />
     <CardEcoComponent />
@@ -126,6 +129,32 @@ video {
   }
   .derecho {
     width: 30%;
+  }
+  .masGestiones {
+    border-radius: 40px;
+    background: linear-gradient(
+      91deg,
+      #00c3a8 -19.31%,
+      #ffb900 74.46%,
+      #ff2745 160.28%
+    );
+    max-height: 29px;
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    padding-top: 1.5%;
+    margin-top: 5%;
+    text-align: center;
+  }
+  .masGestiones p {
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    color: #fff;
   }
 }
 </style>

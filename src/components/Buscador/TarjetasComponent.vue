@@ -1,6 +1,6 @@
 <template>
   <div class="contenedor">
-    <div class="top"></div>
+    <div class="top"><h6>Gestiones más consultadas</h6></div>
     <div class="buscador">
       <label for="">Buscar</label>
       <input type="text" name="" id="" />
@@ -14,6 +14,7 @@
       <carousel :items-to-show="3" :wrapAround="true" :transition="500">
         <slide v-for="slide in this.gestiones" :key="slide">
           <router-link to="/historia" class="interior">
+            <img :src="slide.imagen" alt="" />
             <h5>{{ slide.titulo }}</h5>
           </router-link>
         </slide>
@@ -139,6 +140,11 @@ h1 {
     #ffb900 52.79%,
     #ff2745 107.64%
   );
+  text-align: center;
+  padding: 2%;
+}
+.top h6 {
+  visibility: hidden;
 }
 .buscador {
   position: absolute;
@@ -260,12 +266,22 @@ h5 {
     background: #00c3a8;
     height: 31px;
   }
+  .top h6 {
+    visibility: visible;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: #fff;
+  }
   .contenedor {
     padding-top: 0;
     width: 90%;
     height: 130px;
     border-radius: 15px 0px 0px 0px;
     /* padding-bottom: 3rem; */
+    padding-bottom: 3rem;
+    position: relative;
   }
   .contenedor h1 {
     font-size: 14px;
@@ -285,11 +301,10 @@ h5 {
     margin-top: -1rem;
   }
   .gridcontainer {
-    visibility: hidden;
+    display: none;
   }
   .masGestiones {
-    width: 40%;
-    height: auto;
+    display: none;
   }
   .carousel {
     width: 100%;
@@ -321,12 +336,20 @@ h5 {
     /* padding: 1.5rem 1.5rem; */
     text-decoration: none;
     text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
   .interior h5 {
-    font-size: 12px;
+    font-size: 11px;
   }
   .interior h5:hover {
     color: #019939;
+  }
+  .interior img {
+    height: 34px;
+    width: 34px;
   }
 }
 </style>
