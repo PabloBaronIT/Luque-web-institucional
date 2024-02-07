@@ -401,13 +401,14 @@ export default {
 .tiempo {
   width: 12%;
   background: white;
-  height: 80px;
+  max-height: 80px;
   display: block;
   /* flex-direction: column; */
   justify-content: center;
   text-align: center;
   border-radius: 8px;
   padding: 0.5rem 0;
+  box-sizing: content-box;
 }
 .tiempo p {
   font-size: 10px;

@@ -103,6 +103,9 @@ video {
   align-items: center;
   /* padding-bottom: 5%; */
 }
+.masGestiones {
+  display: none;
+}
 @media (max-width: 500px) {
   .carouselNoticias {
     /* height: auto; */

@@ -112,7 +112,7 @@ export default {
   margin: auto;
   margin-top: 3%;
   padding-top: 2rem;
-  background-image: url("./../../assets/images/LetraL.svg");
+  background-image: url("./../../assets/images/Frame.svg");
   /* opacity: 0.2; */
   background-repeat: space;
   background-position: center;
@@ -141,7 +141,7 @@ h1 {
     #ff2745 107.64%
   );
   text-align: center;
-  padding: 2%;
+  /* padding: 2%; */
 }
 .top h6 {
   visibility: hidden;
@@ -202,6 +202,7 @@ h5 {
 
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
   height: 100%;
+  transition: background 0.8s ease-in-out;
 }
 .card-body {
   background: white;
@@ -258,7 +259,7 @@ h5 {
 }
 
 .carousel-mobile {
-  visibility: hidden;
+  display: none;
 }
 @media (max-width: 500px) {
   .top {
