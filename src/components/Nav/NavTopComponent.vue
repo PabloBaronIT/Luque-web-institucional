@@ -1,15 +1,18 @@
 <template>
   <nav class="contenedor-nav">
-    <i class="bi bi-list burguer" @click="this.setMenu"> </i>
     <router-link to="/"
       ><img src="@/assets/images/LogoLuque.svg" alt="" class="logo-muni"
     /></router-link>
-    <router-link to="/"
-      ><img
-        src="@/assets/images/LogoBlancoLuque.svg"
-        alt=""
-        class="logo-mobile"
-    /></router-link>
+    <div class="divburguer">
+      <i class="bi bi-list burguer" @click="this.setMenu"> </i>
+      <router-link to="/"
+        ><img
+          src="@/assets/images/LogoBlancoLuque.svg"
+          alt=""
+          class="logo-mobile"
+      /></router-link>
+    </div>
+
     <!-- MENU-BURGUER -->
     <div class="menu" v-if="this.menu">
       <div
@@ -62,7 +65,7 @@
 
       <div class="redes-container">
         <a href="">
-          <img class="redes" src="@/assets/images/Email.svg" alt="" />
+          <img class="redes" src="@/assets/images/whats.svg" alt="" />
         </a>
         <a href="">
           <img class="redes" src="@/assets/images/Instagram.svg" alt="" />
@@ -85,7 +88,7 @@
       </div>
       <div class="tiempo">
         <img :src="this.icono" alt="imagen" class="icono" />
-        <h6 style="font-weight: 600">{{ temperatura }}</h6>
+        <h6 style="font-weight: 600">{{ temperatura }}°</h6>
         <p style="margin-top: -0.5rem">{{ tiempo }}</p>
       </div>
     </div>
@@ -94,7 +97,6 @@
     <div class="dropdown">
       <button
         class="btn btn dropdown-toggle asd"
-        :class="{ asd: isSticky }"
         type="button"
         data-bs-toggle="dropdown"
         aria-expanded="false"
@@ -183,13 +185,6 @@
       </ul>
     </div>
   </div>
-  <!-- <div class="colores">
-    <div class="red"></div>
-    <div class="green"></div>
-    <div class="red"></div>
-    <div class="green"></div>
-    <div class="red"></div>
-  </div> -->
 </template>
 <script>
 import axios from "axios";
@@ -322,10 +317,10 @@ export default {
 .contenedor-nav {
   height: 106px;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row;
   justify-content: space-between;
   align-items: center;
-  padding-right: 1.5%;
+  padding: 2%;
   background: #f5f5f5;
   /* position: fixed; */
   /* z-index: 15; */
@@ -369,11 +364,10 @@ export default {
   border-radius: 0px 0px 0px 0px;
   background: linear-gradient(
     90deg,
-    #00c3a8 0.01%,
-    #ffb900 54.81%,
-    #ff2745 104.96%
+    rgb(0, 195, 168, 0.6) 0.01%,
+    rgb(255, 185, 0, 0.6) 54.81%,
+    rgb(255, 39, 69, 0.6) 104.96%
   );
-  opacity: 0.6;
   color: #fff;
   box-shadow: 1px -4px 4px 1px rgba(0, 0, 0, 0.15) inset;
 }
@@ -381,6 +375,7 @@ export default {
   color: white;
   font-size: 16px;
   font-weight: 700;
+  opacity: 1;
 }
 .btn:hover {
   color: #4b4a49;
@@ -457,13 +452,19 @@ input {
 .menu {
   display: none;
 }
+
 @media (max-width: 500px) {
+  .divburguer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 38%;
+    margin-left: -34%;
+  }
   .burguer {
-    /* visibility: visible; */
     display: block;
     color: white;
     font-size: 30px;
-    margin-left: 5%;
   }
   .menu {
     display: block;
@@ -473,6 +474,7 @@ input {
     height: auto;
     background: #fff;
     z-index: 15;
+    left: 0;
   }
   .menu h6 {
     color: #3e3e3e;
@@ -573,7 +575,7 @@ input {
     /* visibility: visible; */
     display: block;
     width: 107px;
-    margin-left: -60%;
+    /* margin-left: -60%; */
   }
 }
 @media (max-width: 1200px) {

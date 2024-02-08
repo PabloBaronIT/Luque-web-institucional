@@ -34,7 +34,7 @@
     </div>
     <div class="texto">
       <h5>{{ this.data.descripcion }}</h5>
-      <p style="color: #019939">Leer más</p>
+      <p style="color: #00c3a8">Leer más</p>
     </div>
   </div>
 </template>
@@ -83,6 +83,12 @@ export default {
   height: 100%;
   border-radius: 20px;
   padding: 2% 2%;
+}
+.texto p {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
 }
 h5 {
   font-weight: 400;

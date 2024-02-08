@@ -69,7 +69,7 @@ export default {
 
 <style scoped>
 .contenedor {
-  width: 80%;
+  width: 70%;
   height: 100%;
   margin: auto;
   /* margin-bottom: 10%; */
@@ -78,10 +78,10 @@ export default {
   /* background: red; */
 }
 .carousel__slide {
-  padding: 0 0.5rem;
+  padding: 0 1%;
   background: #fff;
-  height: 50vh;
-  border-radius: 30px 0px;
+  height: 363px;
+  border-radius: 16px;
   box-shadow: 8px 5px 10px 0px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
@@ -100,9 +100,9 @@ a:hover {
   color: #333232;
 }
 img {
-  height: 65%;
-  width: 98%;
-  border-radius: 30px 0px;
+  height: 66%;
+  width: 100%;
+  border-radius: 16px;
 }
 .carousel__viewport {
   perspective: 2000px;
@@ -128,7 +128,7 @@ img {
 .carousel__slide--prev {
   opacity: 1;
   transform: rotateY(-30deg) scale(0.95);
-  height: 50vh;
+  height: 363px;
 
   /* padding-top: 1rem; */
 }
@@ -136,7 +136,7 @@ img {
 .carousel__slide--next {
   opacity: 1;
   transform: rotateY(10deg) scale(0.95);
-  height: 50vh;
+  height: 363px;
 
   /* padding-top: 1rem; */
 }
@@ -144,7 +144,7 @@ img {
 .carousel__slide--active {
   opacity: 1;
   transform: rotateY(0) scale(1.1);
-  height: 50vh;
+  height: 363px;
   margin: 1.5rem 2rem;
 }
 .interior-titulo {
@@ -156,7 +156,7 @@ img {
 }
 .fecha {
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
 }
 @media (max-width: 500px) {
   .contenedor {
@@ -168,10 +168,7 @@ img {
     width: 100%;
     display: block;
   }
-  /* .carousel {
-    height: 195px;
-    width: 100%;
-  } */
+
   .carousel__slide {
     height: 142px;
     padding: 0;
@@ -183,9 +180,7 @@ img {
     margin: 1.5rem 2.5rem;
     padding-top: 3px;
   }
-  .carousel__slide--next {
-    /* padding-top: 0.2rem; */
-  }
+
   .interior-titulo p {
     font-size: 8px;
   }

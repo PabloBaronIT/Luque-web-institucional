@@ -1,45 +1,40 @@
 <template>
   <footer>
     <div class="telefonos-container">
+      <div>
+        <img
+          src="./../../assets/images/LogoBlancoLuque.svg"
+          alt="logo"
+          class="logo"
+        />
+      </div>
       <div class="telefonos">
-        <div class="telefono" name="primero">
+        <div class="telefono">
+          <h6>CENTRO DE SALUD</h6>
           <div style="display: flex; align-items: center">
             <i class="bi bi-telephone-fill asd"></i>
             <h1>111</h1>
           </div>
-          <h6>HOSPITAL</h6>
         </div>
-        <div class="linea" name="primero"></div>
-        <div class="telefono">
-          <div style="display: flex; align-items: center">
-            <i class="bi bi-telephone-fill asd"></i>
-            <h1>147</h1>
-          </div>
-          <h6>
-            ATENCIÓN AL <br />
-            VECINO
-          </h6>
-        </div>
+
         <div class="linea"></div>
         <div class="telefono">
+          <h6>POLICÍA</h6>
           <div style="display: flex; align-items: center">
             <i class="bi bi-telephone-fill asd"></i>
             <h1>101</h1>
           </div>
-          <h6>POLICÍA</h6>
         </div>
         <div class="linea"></div>
         <div class="telefono">
+          <h6>BOMBEROS</h6>
           <div style="display: flex; align-items: center">
             <i class="bi bi-telephone-fill asd"></i>
             <h1>100</h1>
           </div>
-          <h6>BOMBEROS</h6>
         </div>
       </div>
-      <div class="logo">
-        <img src="./../../assets/images/LogoBlancoLuque.svg" alt="logo" />
-      </div>
+
       <div class="foterMobile">
         <img src="./../../assets/images/LogoBlancoLuque.svg" alt="logo" />
         <div class="direccionMobile">
@@ -75,11 +70,11 @@ footer {
   /* background: var(--blue); */
   display: flex;
   flex-flow: column wrap;
-  height: 40vh;
+  height: 40%;
   /* box-shadow: 0px 0px 15px #aaa; */
   align-items: center;
   justify-content: center;
-  /* padding: 20px; */
+  padding: 2%;
   width: 100%;
 }
 h1 {
@@ -92,8 +87,8 @@ h1 {
   font-size: 38px;
 }
 .linea {
-  height: auto;
-  width: 2px;
+  height: 130px;
+  width: 1px;
   background: white;
 }
 /* h4 {
@@ -110,28 +105,34 @@ h1 {
   /* backdrop-filter: blur(7.5px); */
   /* border-radius: 50px 0px; */
   /* padding-top: 1rem; */
+  margin-bottom: 2%;
 }
 .telefonos {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 60%;
+  width: 45%;
   color: white;
   height: auto;
+  align-items: center;
   /* margin-top: 1vh; */
   /* margin-bottom: -1rem; */
 }
 .telefono {
   text-align: center;
 }
-/* .numeros {
-  color: #019939;
-  font-size: 80px;
-  font-weight: 900;
-  line-height: normal;
+.telefono h6 {
+  font-size: 16px;
   font-style: normal;
-  margin-top: -5vh;
-} */
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: -1%;
+}
+.logo {
+  width: 392px;
+  height: 116px;
+}
+
 .direccion {
   color: white;
   font-weight: 300;
@@ -158,12 +159,21 @@ h1 {
   }
   .telefonos {
     height: 30%;
-    width: 80%;
+    width: 75%;
     margin: auto;
+  }
+  .telefono {
+    width: 80px;
+    position: relative;
+    /* background: red; */
+    text-align: center;
   }
   .telefono h6 {
     font-size: 10px;
     font-weight: 400;
+    position: absolute;
+    left: 10%;
+    top: 75%;
   }
   h1 {
     font-size: 26px;
@@ -198,8 +208,8 @@ h1 {
   .direccion {
     display: none;
   }
-  [name="primero"] {
-    display: none;
+  .linea {
+    height: 60px;
   }
 }
 </style>

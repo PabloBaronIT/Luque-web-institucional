@@ -60,6 +60,7 @@ export default {
 <style scoped>
 video {
   width: 100%;
+  height: auto;
   margin-top: -3.4rem;
 }
 .contenedor-home {
@@ -148,7 +149,7 @@ video {
     flex-direction: row;
     justify-content: center;
     align-self: center;
-    padding-top: 1.5%;
+    padding: 1.5%;
     margin-top: 5%;
     text-align: center;
   }

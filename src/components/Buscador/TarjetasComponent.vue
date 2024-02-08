@@ -33,9 +33,11 @@
       >
         <div class="card-body">
           <div><img :src="item.imagen" alt="" /></div>
-          <h5>
-            {{ item.titulo }}
-          </h5>
+          <div class="titulo">
+            <h5>
+              {{ item.titulo }}
+            </h5>
+          </div>
         </div>
       </div>
     </div>
@@ -127,7 +129,8 @@ h1 {
   font-weight: 600;
   margin-top: 2rem;
   margin-bottom: 1rem;
-  /* font-size: 50px; */
+  font-family: "Source Sans 3", sans-serif;
+  font-size: 50px;
 }
 .top {
   position: absolute;
@@ -186,37 +189,35 @@ input {
 }
 h5 {
   color: #3e3e3e;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   margin-left: 3%;
 }
 .cardGestiones {
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: row; */
 
   border-radius: 16px;
   background: #fff;
   padding: 0.2rem;
-
+  /* padding-left: 3%; */
   box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  height: 100%;
+  min-height: 102px;
+  min-width: 236px;
   transition: background 0.8s ease-in-out;
 }
 .card-body {
-  background: white;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
   border-radius: 16px;
   height: 100%;
   width: 100%;
-  padding: 0 5%;
-  /* max-height: 80px; */
-
-  /* width: 100%; */
+  text-align: left;
+  background: white;
 }
 .card-body img {
   max-width: 44px;
@@ -231,6 +232,10 @@ h5 {
   );
   /* width: 110%; */
   /* position: relative; */
+}
+.titulo {
+  width: 60%;
+  margin-left: -10%;
 }
 .masGestiones {
   border-radius: 40px;
@@ -262,10 +267,17 @@ h5 {
   display: none;
 }
 @media (max-width: 500px) {
+  .contenedor {
+    background-image: url("./../../assets/images/FrameMobile.svg");
+    padding-top: 0;
+    /* background-repeat: space;
+  background-position: center; */
+  }
   .top {
     width: 100%;
     background: #00c3a8;
     height: 31px;
+    padding-top: 2%;
   }
   .top h6 {
     visibility: visible;
@@ -289,17 +301,17 @@ h5 {
     visibility: hidden;
   }
   .buscador {
-    visibility: hidden;
+    display: none;
   }
   h5 {
     color: #4b4a49;
     font-weight: 700;
   }
   .carousel-mobile {
-    visibility: visible;
+    display: block;
     width: 100%;
     height: auto;
-    margin-top: -1rem;
+    margin-top: -6%;
   }
   .gridcontainer {
     display: none;
@@ -315,10 +327,10 @@ h5 {
     /* padding-right: 3rem; */
   }
   .carousel__slide {
-    padding: 0.3rem 0.3rem;
+    padding: 0.3rem 1rem;
     background: #fff;
-    max-height: 6rem;
-    max-width: 70%;
+    min-height: 61px;
+    min-width: 146px;
     border-radius: 8px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     margin: 0.5rem;
@@ -329,8 +341,8 @@ h5 {
     background: linear-gradient(180deg, #019939 4.26%, #ffcc03 126.04%);
   }
   .interior {
-    height: 100%;
-    width: 100%;
+    height: 98%;
+    width: 98%;
     background: #fff;
     border-radius: 17px;
     text-align: center;

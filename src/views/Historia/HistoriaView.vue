@@ -12,13 +12,13 @@
         de Luque. Guiados por la historia, nos embarcamos en la tarea de labrar
         un mañana aún más robusto.
       </h4>
-    </div>
-    <div class="volver">
-      <div style="display: flex; flex-direction: row">
-        <h4>Siguiente</h4>
-        <router-link to="/pueblo/sacanta-hoy/#inicio">
-          <img src="@/assets/images/FlechaDerecha.svg" alt="imagen" />
-        </router-link>
+      <div class="volver">
+        <div style="display: flex; flex-direction: row">
+          <h4>Siguiente</h4>
+          <router-link to="/pueblo/sacanta-hoy/#inicio">
+            <img src="@/assets/images/FlechaDerecha.svg" alt="imagen" />
+          </router-link>
+        </div>
       </div>
     </div>
   </div>
@@ -26,7 +26,6 @@
 
 <script>
 import HistoriaComponentVue from "@/components/Historia/HistoriaComponent.vue";
-// import Historia from "@/components/Ciudad/LineaComponent.vue";
 export default {
   name: "HistoriaView",
   components: {
@@ -82,8 +81,9 @@ export default {
   width: 85%;
   /* height: 146px; */
   margin: auto;
-  margin-top: 8%;
-  margin-bottom: 13%;
+  margin-top: 5%;
+  padding-bottom: 10%;
+  position: relative;
 }
 .textoUltimo h4 {
   font-weight: 400;
@@ -91,9 +91,9 @@ export default {
 }
 .volver {
   position: absolute;
-  width: 30%;
-  right: -12%;
-  bottom: -5%;
+  width: 10%;
+  right: 5%;
+  bottom: 15%;
   /* display: flex; */
   /* flex-direction: row; */
   /* justify-content: space-between; */
@@ -107,6 +107,8 @@ export default {
 .volver h4 {
   /* margin-left: 14px; */
   color: #4b4a49;
+  font-size: 24px;
+  font-style: normal;
   font-weight: 400;
   margin-top: 2.5vh;
   margin-left: 1vw;

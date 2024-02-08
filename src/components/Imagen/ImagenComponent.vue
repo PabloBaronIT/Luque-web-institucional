@@ -129,12 +129,12 @@ h3 {
   .contenedor-imagen {
     margin-top: 5%;
     width: 100%;
-    height: 171px;
+    height: 181px;
     background-size: cover;
     border-radius: 16px 0px 16px 0px;
   }
   .capa {
-    height: 171px;
+    height: 181px;
     width: 100%;
 
     border-radius: 0px 0px 16px 0px;
@@ -142,6 +142,7 @@ h3 {
 
   .text-izquierdo h3 {
     font-size: 8px;
+    width: 90%;
   }
   .grande {
     font-size: 24px;
@@ -166,6 +167,9 @@ h3 {
   }
   .linea-b {
     visibility: hidden;
+  }
+  br {
+    display: none;
   }
 }
 </style>
