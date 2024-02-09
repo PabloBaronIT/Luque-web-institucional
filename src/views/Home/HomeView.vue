@@ -143,13 +143,13 @@ video {
       #ff2745 160.28%
     );
     max-height: 29px;
-    width: 50%;
+    width: 55%;
     margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-self: center;
-    padding: 1.5%;
+    padding: 2% 1%;
     margin-top: 5%;
     text-align: center;
   }

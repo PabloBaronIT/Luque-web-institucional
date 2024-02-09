@@ -125,7 +125,7 @@ export default {
   .volver {
     width: 10%;
     right: 2%;
-    bottom: -4%;
+    bottom: 15%;
     /* background: red; */
   }
   .volver h4 {
@@ -144,6 +144,10 @@ export default {
   }
   .derecho {
     width: 30%;
+  }
+  .textoUltimo {
+    width: 90%;
+    text-align: center;
   }
   .textoUltimo h4 {
     font-size: 12px;

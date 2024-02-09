@@ -458,8 +458,9 @@ input {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 38%;
-    margin-left: -34%;
+    width: 40%;
+    margin-left: -32%;
+    margin-top: 2%;
   }
   .burguer {
     display: block;
@@ -496,7 +497,8 @@ input {
     flex-direction: column;
     justify-content: center;
     height: auto;
-    padding: 2% 2%;
+    padding: 2% 2% 1%;
+    align-self: center;
   }
   .linea-menu {
     height: 1px;
@@ -521,7 +523,7 @@ input {
     background: #fff;
   }
   .item-subMenu h6 {
-    margin-bottom: 2%;
+    margin-bottom: 3%;
   }
   .contenedor-nav {
     /* position: fixed; */

@@ -13,7 +13,7 @@
           <h6>CENTRO DE SALUD</h6>
           <div style="display: flex; align-items: center">
             <i class="bi bi-telephone-fill asd"></i>
-            <h1>111</h1>
+            <h1>107</h1>
           </div>
         </div>
 
@@ -37,6 +37,8 @@
 
       <div class="foterMobile">
         <img src="./../../assets/images/LogoBlancoLuque.svg" alt="logo" />
+        <div class="linea" style="height: 22px"></div>
+
         <div class="direccionMobile">
           <h5>
             Municipalidad de Luque 9 de julio 806, Luque, Córdoba CP X5967 TEL.:
@@ -165,7 +167,7 @@ h1 {
   .telefono {
     width: 80px;
     position: relative;
-    /* background: red; */
+
     text-align: center;
   }
   .telefono h6 {
@@ -177,6 +179,7 @@ h1 {
   }
   h1 {
     font-size: 26px;
+    /* margin-left: 5%; */
   }
   .asd {
     font-size: 16px;
@@ -198,6 +201,7 @@ h1 {
   .direccionMobile {
     width: 42%;
     color: white;
+    margin-bottom: -2%;
   }
   .direccionMobile h5 {
     font-size: 10px;

@@ -12,8 +12,13 @@
     <!-- MOBILE -->
     <div class="carousel-mobile">
       <carousel :items-to-show="3" :wrapAround="true" :transition="500">
-        <slide v-for="slide in this.gestiones" :key="slide">
-          <router-link to="/historia" class="interior">
+        <slide
+          v-for="slide in this.gestiones"
+          :key="slide"
+          @click="setClass()"
+          :class="{ hovermobile: hover }"
+        >
+          <router-link to="/pueblo/historia" class="interior">
             <img :src="slide.imagen" alt="" />
             <h5>{{ slide.titulo }}</h5>
           </router-link>
@@ -100,7 +105,13 @@ export default {
             "https://res.cloudinary.com/ddko88otf/image/upload/v1706206476/icon-peso_lzme9t.png",
         },
       ],
+      hover: false,
     };
+  },
+  methods: {
+    setClass() {
+      this.hover = true;
+    },
   },
 };
 </script>
@@ -327,7 +338,7 @@ h5 {
     /* padding-right: 3rem; */
   }
   .carousel__slide {
-    padding: 0.3rem 1rem;
+    padding: 1% 1%;
     background: #fff;
     min-height: 61px;
     min-width: 146px;
@@ -340,11 +351,14 @@ h5 {
   .carousel__slide:hover {
     background: linear-gradient(180deg, #019939 4.26%, #ffcc03 126.04%);
   }
+  .hovermobile {
+    background: linear-gradient(180deg, #019939 4.26%, #ffcc03 126.04%);
+  }
   .interior {
-    height: 98%;
-    width: 98%;
+    height: 100%;
+    width: 100%;
     background: #fff;
-    border-radius: 17px;
+    border-radius: 8px;
     text-align: center;
     /* padding: 1.5rem 1.5rem; */
     text-decoration: none;

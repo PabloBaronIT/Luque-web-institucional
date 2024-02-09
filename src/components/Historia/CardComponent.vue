@@ -34,7 +34,7 @@
     </div>
     <div class="texto">
       <h5>{{ this.data.descripcion }}</h5>
-      <p style="color: #00c3a8">Leer más</p>
+      <p>Leer más</p>
     </div>
   </div>
 </template>
@@ -112,6 +112,7 @@ h5 {
     height: 220px;
     width: 95%;
     padding: 0 2% 5% 2%;
+    border-radius: 16px;
   }
   .contenedor-fecha {
     position: absolute;
@@ -122,8 +123,10 @@ h5 {
     display: none;
   }
   .imagen {
-    height: 80%;
+    height: 85%;
     width: 180px;
+    margin-top: -3%;
+    border-radius: 8px;
   }
   .fecha {
     font-size: 20px;
@@ -146,6 +149,7 @@ h5 {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    color: #00c3a8;
   }
 }
 </style>
